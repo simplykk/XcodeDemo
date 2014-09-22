@@ -8,6 +8,8 @@
 
 #import "Student.h"
 
+#import "Book.h"
+
 @implementation Student
 
 //@synthesize book = _book;

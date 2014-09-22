@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Book.h"
+//#import "Book.h"
+@class Book;
 
 @interface Student : NSObject {
     Book*  _book;
