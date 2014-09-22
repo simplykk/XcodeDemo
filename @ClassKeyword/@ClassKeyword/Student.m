@@ -14,23 +14,24 @@
 
 //@synthesize book = _book;
 
-- (void)setBook:(Book *)book {
-    
-    if (_book != book) {
-        [_book release];
-        _book = [book retain];
-    }
-}
+//- (void)setBook:(Book *)book {
+//    
+//    if (_book != book) {
+//        [_book release];
+//        _book = [book retain];
+//    }
+//}
 
-- (Book *)book {
-    return _book;
-}
+//- (Book*)book {
+//    return _book;
+//}
 
 - (void)dealloc {
     [super dealloc];
     
     //self.book = nil;
-    [self setBook:nil];
+    //[self setBook:nil];
+    [_book release];
 }
 
 @end
