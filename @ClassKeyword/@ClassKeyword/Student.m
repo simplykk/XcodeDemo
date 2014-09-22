@@ -34,4 +34,17 @@
     [_book release];
 }
 
++ (id)student {
+    Student* stu = [[Student alloc] init];
+    [stu autorelease]; // 按照：谁创建对象谁释放的法制，我们要在内部进行释放，因此需要用：autorelease
+    return stu;
+}
+
++ (id)studentWithAge: (int)age {
+//    Student* stu = [self student]; // 在OC中，self指向谁是看谁调用这个方法，因此这里的self指向调用这个方法的Student类
+    Student* stu = [[[Student alloc] init] autorelease];
+    [stu setAge:age];
+    return stu;
+}
+
 @end
