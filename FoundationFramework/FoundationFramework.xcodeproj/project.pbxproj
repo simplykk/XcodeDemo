@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		036CD62F19D1AE2000D653B5 /* NS_Class.part in Sources */ = {isa = PBXBuildFile; fileRef = 036CD62E19D1AE2000D653B5 /* NS_Class.part */; };
+		0301DCF919D2F6ED00A38452 /* Struct.h in Sources */ = {isa = PBXBuildFile; fileRef = 03842FC319D1586400B92E96 /* Struct.h */; };
+		036CD62F19D1AE2000D653B5 /* NS_Class.h in Sources */ = {isa = PBXBuildFile; fileRef = 036CD62E19D1AE2000D653B5 /* NS_Class.h */; };
 		03842FBD19D14F8400B92E96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842FBC19D14F8400B92E96 /* main.m */; };
-		03842FC419D1586400B92E96 /* Struct.part in Sources */ = {isa = PBXBuildFile; fileRef = 03842FC319D1586400B92E96 /* Struct.part */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +25,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		036CD62E19D1AE2000D653B5 /* NS_Class.part */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NS_Class.part; sourceTree = "<group>"; };
+		0301DCFA19D2FC9C00A38452 /* NSString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSString.h; sourceTree = "<group>"; };
+		036CD62E19D1AE2000D653B5 /* NS_Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NS_Class.h; sourceTree = "<group>"; };
 		03842FB919D14F8400B92E96 /* FoundationFramework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FoundationFramework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03842FBC19D14F8400B92E96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		03842FC319D1586400B92E96 /* Struct.part */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Struct.part; sourceTree = "<group>"; };
+		03842FC319D1586400B92E96 /* Struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Struct.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				03842FBC19D14F8400B92E96 /* main.m */,
-				03842FC319D1586400B92E96 /* Struct.part */,
-				036CD62E19D1AE2000D653B5 /* NS_Class.part */,
+				03842FC319D1586400B92E96 /* Struct.h */,
+				036CD62E19D1AE2000D653B5 /* NS_Class.h */,
+				0301DCFA19D2FC9C00A38452 /* NSString.h */,
 			);
 			path = FoundationFramework;
 			sourceTree = "<group>";
@@ -124,8 +126,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03842FC419D1586400B92E96 /* Struct.part in Sources */,
-				036CD62F19D1AE2000D653B5 /* NS_Class.part in Sources */,
+				0301DCF919D2F6ED00A38452 /* Struct.h in Sources */,
+				036CD62F19D1AE2000D653B5 /* NS_Class.h in Sources */,
 				03842FBD19D14F8400B92E96 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

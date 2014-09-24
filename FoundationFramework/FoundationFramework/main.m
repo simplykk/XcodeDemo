@@ -7,8 +7,14 @@
 //
 #import <Foundation/Foundation.h>
 
-#import "Struct.part"
-#import "NS_Class.part"
+#import "Struct.h"
+#import "NS_Class.h"
+#import "NSString.h"
+
+
+
+//#import "Struct.part"
+//#import "NS_Class.part"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -29,14 +35,19 @@ int main(int argc, const char * argv[]) {
          
          */
         
-        testRange();
-        testPoint();
         
-        testNSString();
+//        testRange();
+//        testPoint();
+//
+//        testNSString();
+//        
+//        testStringCreate2();
+//        
+//        testStringWithNET();
         
-        testStringCreate2();
+        testCompare();
         
-        testStringWithNET();
+        testSearch();
         
     }
     return 0;

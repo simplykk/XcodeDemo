@@ -16,13 +16,14 @@
 
 
 
-
 void test1 () {
     typedef struct Date {
         int year;
         int month;
         int day;
     } MyDate;
+    
+    
     
     MyDate d = {2011,2,1};
     d.month = 11;
@@ -80,3 +81,4 @@ void testRect () {
     NSLog(@"%@",NSStringFromRect(rect));
     
 }
+
