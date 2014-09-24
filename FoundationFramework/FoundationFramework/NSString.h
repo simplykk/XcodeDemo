@@ -61,4 +61,79 @@ void subString () {
     NSRange range = NSMakeRange(2, 3); // 从下标2开始，截取3个字符
 
     NSLog(@"指定范围： %@",[str substringWithRange:range]);
+    
+    //字符串切片
+    NSString* str2 = @"1,2,3,4,5";
+    NSArray* array = [str2 componentsSeparatedByString:@","];
+    NSLog(@"array : %@",array);
+    
+    
+}
+
+
+#pragma mark    与路径相关
+void testStringWithPath () {
+//    NSArray* array =  [NSArray array]; //  快速创建一个自动释放的数组
+    
+    NSMutableArray* components = [NSMutableArray array]; // 快速创建一个可改变的自动释放的数组
+    [components addObject:@"Users"];
+    [components addObject:@"MJ"];
+    [components addObject:@"Desktop"];
+    
+    NSString* path = [NSString pathWithComponents:components];
+    NSLog(@"path : %@",path);
+    
+    NSArray* array = [path pathComponents];// 是pathWithComponents的逆过程
+    NSLog(@"array : %@",array);
+    
+    path = @"/users/mj/test";
+    BOOL b = [path isAbsolutePath];//判断是否绝对路径，以前面是否有/判断
+    NSLog(@"是否绝对路径:%i",b);
+    
+    NSLog(@"最后一级目录：%@",[path lastPathComponent]);
+    
+    NSLog(@"删除最后一级目录返回的路径:%@",[path stringByDeletingLastPathComponent]);
+    
+    NSLog(@"拼接一个目录后的路径：%@",[path stringByAppendingPathComponent:@"abc"]);
+}
+
+#pragma mark 扩展名处理
+void testExtension () {
+    NSString* str = @"/User/MJ/test.txt";
+    
+    NSLog(@"扩展名：%@",[str pathExtension]);
+    
+    NSLog(@"删除扩展名称：%@",[str stringByDeletingPathExtension]);
+    
+    NSLog(@"添加扩展名：%@",[str stringByAppendingPathExtension:@"mp3"]);
+    
+}
+
+#pragma mark 字符串的导出
+void testExport () { //  如果文件不存在，会自动创建；如果文件夹不存在，会报错;如果编码错误，会报错。
+    NSString* str = @"123456";
+    NSString* path = @"/Users/geekii/test.txt";
+    NSError* error = nil;
+    [str writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    // atomically 原子性：代表一次性操作，首先会创建一个临时文件，一点一点写到临时文件中，再将
+    //临时文件拷贝到目标文件，如果是非原子性（NO），则直接写到目标文件中；建议使用原子性,这样能保证文件安全
+    if (error) {
+        NSLog(@"写入失败：%@",error); // [error localizedDescription]  会返回主要错误信息
+    } else {
+        NSLog(@"写入成功");
+    }
+}
+
+#pragma mark 测试其他用法
+void testStringOther () {
+    NSString* str = @"1";
+    
+    int a = [str intValue];
+    NSLog(@"a:%i",a);
+    
+    NSLog(@"字符串长度（求的是字数，不是字符数）:%zi",[@"你好" length]);
+    
+    NSLog(@"取出第一个字符(不支持中文)：%c",[@"abc" characterAtIndex:0]);
+    
+    NSLog(@"转换为C语言的字符串：%s",[@"abc" UTF8String]);
 }

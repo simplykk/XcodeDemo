@@ -49,6 +49,10 @@ int main(int argc, const char * argv[]) {
         
         testSearch();
         subString();
+        testStringWithPath();
+        testExtension();
+        testStringOther();
+        testExport();
         
     }
     return 0;
