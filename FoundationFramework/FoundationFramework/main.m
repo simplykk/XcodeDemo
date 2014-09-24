@@ -48,6 +48,7 @@ int main(int argc, const char * argv[]) {
         testCompare();
         
         testSearch();
+        subString();
         
     }
     return 0;

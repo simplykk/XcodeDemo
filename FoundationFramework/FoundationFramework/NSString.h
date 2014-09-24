@@ -35,7 +35,7 @@ void testCompare () {
 #pragma mark 字符串的搜索
 void  testSearch () {
      // NSString 搜索字符串
-    NSString* str = @"1234.part";
+    NSString* str = @"123234.part";
     
     NSLog(@"是否以12开头：%i",[str hasPrefix:@"12"]);
     NSLog(@"是否以part结尾:%i",[str hasSuffix:@".part"]);
@@ -44,4 +44,21 @@ void  testSearch () {
     // 如果找不到，返回一个location 为NSNotFound常量,location为NSIntegerMax，length为0
     NSLog(@"检查是否包含23，返回它的范围：%@",NSStringFromRange(range));
     
+    NSRange backRange = [str rangeOfString:@"23" options:NSBackwardsSearch];
+    NSLog(@"从尾部开始搜索23:%@",NSStringFromRange(backRange));
+    
+}
+
+
+void subString () {
+    NSString* str = @"123456";
+    NSString* sub_str = [str substringFromIndex:3]; //从fromindex开始截取
+    
+    NSLog(@"%@",sub_str);
+    NSLog(@"从尾部开始截取：%@",[str substringToIndex:3]); // 从头部开始截取到toindex前
+   
+    //指定范围进行截取
+    NSRange range = NSMakeRange(2, 3); // 从下标2开始，截取3个字符
+
+    NSLog(@"指定范围： %@",[str substringWithRange:range]);
 }
