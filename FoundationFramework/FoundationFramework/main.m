@@ -10,6 +10,8 @@
 #import "Struct.h"
 #import "NS_Class.h"
 #import "NSString.h"
+#import "NSMutableString.h"
+#import "NSArray.h"
 
 
 
@@ -45,15 +47,25 @@ int main(int argc, const char * argv[]) {
 //        
 //        testStringWithNET();
         
-        testCompare();
+//        testCompare();
+//        
+//        testSearch();
+//        subString();
+//        testStringWithPath();
+//        testExtension();
+//        testStringOther();
+//        testExport();
         
-        testSearch();
-        subString();
-        testStringWithPath();
-        testExtension();
-        testStringOther();
-        testExport();
         
+        //nsmutablestring
+        testMStringCreate();
+        
+        //nsarray
+        testNSArray();
+        testArrayUse();
+        testArrayMemory();
+        testSendMSG();
+        testArrayTraverse();
     }
     return 0;
 }
