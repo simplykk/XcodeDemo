@@ -11,8 +11,8 @@
 		03428A9A19D5A2660013341A /* NSMutableString.h in Sources */ = {isa = PBXBuildFile; fileRef = 03428A9919D5A2660013341A /* NSMutableString.h */; };
 		03428A9C19D5A4B10013341A /* NSArray.h in Sources */ = {isa = PBXBuildFile; fileRef = 03428A9B19D5A4B10013341A /* NSArray.h */; };
 		03428A9F19D5A8FF0013341A /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 03428A9E19D5A8FF0013341A /* Student.m */; };
+		03428AA019D5B50E0013341A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842FBC19D14F8400B92E96 /* main.m */; };
 		036CD62F19D1AE2000D653B5 /* NS_Class.h in Sources */ = {isa = PBXBuildFile; fileRef = 036CD62E19D1AE2000D653B5 /* NS_Class.h */; };
-		03842FBD19D14F8400B92E96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842FBC19D14F8400B92E96 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -141,7 +141,7 @@
 				03428A9C19D5A4B10013341A /* NSArray.h in Sources */,
 				036CD62F19D1AE2000D653B5 /* NS_Class.h in Sources */,
 				03428A9A19D5A2660013341A /* NSMutableString.h in Sources */,
-				03842FBD19D14F8400B92E96 /* main.m in Sources */,
+				03428AA019D5B50E0013341A /* main.m in Sources */,
 				03428A9F19D5A8FF0013341A /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
