@@ -7,6 +7,8 @@
 //
 #import <Foundation/Foundation.h>
 
+#import "Student.h"
+
 #import "Struct.h"
 #import "NS_Class.h"
 #import "NSString.h"
@@ -90,6 +92,36 @@ void testDate () {// NSData 相当于java中的字节数组
     [formatter release];
 }
 
+void testNSObject () {
+    id stu = [[[Student alloc] init] autorelease];
+    BOOL res = [stu isKindOfClass:[Student class]]; // 判断改对象是不是某个类或它的子类
+//    [stu isMemberOfClass:[Student class]]; // 这个方法比较严格，判断对象是不是该类
+    
+    
+    //延迟2秒调用方法
+    
+    [stu performSelector:@selector(test2:) withObject:@"abc" afterDelay:2];
+    //[NSThread sleepForTimeInterval:5];
+
+    //OC中的反射
+    //1.类名的反射，只知道类名字符串，创建出一个该类对象
+    NSString* cls = @"Student";
+    Class clazz = NSClassFromString(cls);
+    
+    id obj = [[[clazz alloc] init] autorelease];
+    NSLog(@"打印出类：%@",obj);
+    
+    NSString* clsStr =  NSStringFromClass([Student class]);
+    NSLog(@"clsStr : %@",clsStr);
+    
+    //2.方法的反射
+    NSString* methodStr = @"test";
+    SEL selector = NSSelectorFromString(methodStr);
+    [stu performSelector:selector];
+    
+
+}
+
 //#import "Struct.part"
 //#import "NS_Class.part"
 
@@ -159,6 +191,7 @@ int main(int argc, const char * argv[]) {
 //        testNSValue();
 //        testNSNull();
 //        testDate();
+        testNSObject();
         
     }
     return 0;
