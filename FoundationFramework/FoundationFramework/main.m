@@ -66,6 +66,9 @@ int main(int argc, const char * argv[]) {
         testArrayMemory();
         testSendMSG();
         testArrayTraverse();
+        testArrayDerive();
+        testArrayOther();
+        testArraySort();
     }
     return 0;
 }

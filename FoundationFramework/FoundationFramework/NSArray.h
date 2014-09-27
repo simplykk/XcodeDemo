@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Student.h"
+#import "User.h"
 
 void testNSArray () {
     NSArray* array = [NSArray array]; // 快速创建方法
@@ -109,6 +110,45 @@ void testArrayTraverse () {
     
     
 }// 遍历数组
+
+void testArrayDerive () {
+    NSArray* array = [NSArray arrayWithObjects:@"1",@"3",nil];
+    
+    NSArray* array2 = [array arrayByAddingObject:@"2"];
+    
+    NSArray* array3 = [array arrayByAddingObjectsFromArray:array2];
+    
+    
+    NSArray* array4 = [array3 subarrayWithRange:NSMakeRange(1, 3)];
+
+    
+    NSLog(@" derive array %@, array3 : %@,array4:%@",array2,array3,array4);
+} //  array派生方法
+
+void testArrayOther () {
+    NSArray* array = [NSArray arrayWithObjects:@"1",@"2",@"3", nil];
+    
+    NSString* str = [array componentsJoinedByString:@","];// 利用分隔符拼接数组元素
+    
+    //从array中生成xml文件，同样读取也需要符合格式的XML文件
+//    [array writeToFile:@"/Users/geekii/" atomically:YES];
+    
+    
+    
+    NSLog(@"str : %@",str);
+}//其他方法
+
+void testArraySort() {
+    NSArray* array = [NSArray arrayWithObjects:@"1",@"3",@"2", nil];
+    
+    NSArray* array2 = [array sortedArrayUsingSelector:@selector(compare:)];//最简单的排序
+    
+    NSArray* array3 = [NSArray arrayWithObjects:[User userWithFirstName:@"Ada" AndLastName:@"Wong"],[User userWithFirstName:@"Jack" AndLastName:@"Lemons"],[User userWithFirstName:@"Damo" AndLastName:@"Swift"], nil];
+    
+    
+    
+    NSLog(@"sorted array : %@",array2);
+}// 数组排序
 
 
 
