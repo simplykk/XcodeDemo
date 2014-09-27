@@ -165,5 +165,16 @@ void testArraySort() {
     
 }// 数组排序
 
+void testNSMutableArray () {
+    NSMutableArray* array = [NSMutableArray arrayWithObjects:@"1", nil];
+    
+    [array addObject:@"2"]; // 添加
+    [array removeObject:@"1"]; // 移除
+    [array removeAllObjects]; //清空
+    [array addObject:@"ddd"];
+    [array replaceObjectAtIndex:0 withObject:@"abc"];
+    NSLog(@"%@",array);
+}
+
 
 

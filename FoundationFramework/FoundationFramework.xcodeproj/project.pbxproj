@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0301DCF919D2F6ED00A38452 /* Struct.h in Sources */ = {isa = PBXBuildFile; fileRef = 03842FC319D1586400B92E96 /* Struct.h */; };
+		033C0A2919D681A1007AF937 /* NSDictionary.h in Sources */ = {isa = PBXBuildFile; fileRef = 033C0A2819D681A1007AF937 /* NSDictionary.h */; };
 		03428A9A19D5A2660013341A /* NSMutableString.h in Sources */ = {isa = PBXBuildFile; fileRef = 03428A9919D5A2660013341A /* NSMutableString.h */; };
 		03428A9C19D5A4B10013341A /* NSArray.h in Sources */ = {isa = PBXBuildFile; fileRef = 03428A9B19D5A4B10013341A /* NSArray.h */; };
 		03428A9F19D5A8FF0013341A /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 03428A9E19D5A8FF0013341A /* Student.m */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0301DCFA19D2FC9C00A38452 /* NSString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSString.h; sourceTree = "<group>"; };
+		033C0A2819D681A1007AF937 /* NSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary.h; sourceTree = "<group>"; };
 		03428A9919D5A2660013341A /* NSMutableString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableString.h; sourceTree = "<group>"; };
 		03428A9B19D5A4B10013341A /* NSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray.h; sourceTree = "<group>"; };
 		03428A9D19D5A8FF0013341A /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				03428AA119D5B6CA0013341A /* readme.txt */,
 				036FAD4119D6477600087792 /* User.h */,
 				036FAD4219D6477600087792 /* User.m */,
+				033C0A2819D681A1007AF937 /* NSDictionary.h */,
 			);
 			path = FoundationFramework;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033C0A2919D681A1007AF937 /* NSDictionary.h in Sources */,
 				0301DCF919D2F6ED00A38452 /* Struct.h in Sources */,
 				036FAD4319D6477600087792 /* User.m in Sources */,
 				03428A9C19D5A4B10013341A /* NSArray.h in Sources */,

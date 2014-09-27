@@ -10,6 +10,8 @@
 
 @interface Student : NSObject
 
+@property (nonatomic,retain) NSString* name;
+
 + (id) student;
 
 - (void) test2: (NSString*) str;
