@@ -145,9 +145,24 @@ void testArraySort() {
     
     NSArray* array3 = [NSArray arrayWithObjects:[User userWithFirstName:@"Ada" AndLastName:@"Wong"],[User userWithFirstName:@"Jack" AndLastName:@"Lemons"],[User userWithFirstName:@"Damo" AndLastName:@"Swift"], nil];
     
-    
+    [array3 sortedArrayUsingSelector:@selector(compareUser:)];
     
     NSLog(@"sorted array : %@",array2);
+    
+    NSLog(@"sorted user : %@",array3);
+    
+    //使用block进行排序
+    [array3 sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        //先按照LastName排序，再按FirstName
+        NSComparisonResult lastNameRes = [[obj1 lastName] compare:[obj2 lastName]];
+        if (lastNameRes == NSOrderedSame) {
+            return [[obj1 firstName] compare:[obj2 firstName]];
+        }
+        return lastNameRes;
+
+    }];
+    
+    
 }// 数组排序
 
 
